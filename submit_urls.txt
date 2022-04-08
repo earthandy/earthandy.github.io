@@ -1,0 +1,10 @@
+https://poolideas.cn/2022/04/08/the_complete_life_cycle_of_a_c_program/
+https://poolideas.cn/2022/03/20/how_the_function_is_called_in_c_language/
+https://poolideas.cn/2022/03/19/how_data_and_magnitude_are_organized/
+https://poolideas.cn/2022/03/18/control_logic_how_expressions_and_statements_coordinate_program_execution/
+https://poolideas.cn/2022/03/17/cpu_working_mode/
+https://poolideas.cn/2022/03/07/system_kernel/
+https://poolideas.cn/2022/03/02/container_s_knowledge_you_need_to_know/
+https://poolideas.cn/2022/03/05/you_should_know_about_computer/
+https://poolideas.cn/2022/03/03/goodbye_centos_say_hi_rocky/
+https://poolideas.cn/2022/02/24/iot_data_perspective/

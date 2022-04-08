@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://poolideas.cn/tags/Chrome-OS/</loc>
+        <lastmod>2021-12-20T15:55:42.360Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Shell/</loc>
+        <lastmod>2021-12-20T15:56:39.161Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/docker/</loc>
+        <lastmod>2021-12-20T16:15:47.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/%E9%80%9A%E4%BF%A1/</loc>
+        <lastmod>2021-12-20T16:17:36.137Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/virtual-machine/</loc>
+        <lastmod>2021-12-21T05:09:35.480Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/gateway/</loc>
+        <lastmod>2021-12-21T05:29:49.177Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/%E7%99%BB%E5%BD%95/</loc>
+        <lastmod>2021-12-21T05:30:30.486Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/</loc>
+        <lastmod>2021-12-21T05:31:02.703Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Brew/</loc>
+        <lastmod>2022-01-05T17:10:16.327Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Icon/</loc>
+        <lastmod>2022-01-28T16:30:08.096Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Basic-Widgets/</loc>
+        <lastmod>2022-01-28T16:37:15.046Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/TODO/</loc>
+        <lastmod>2022-01-28T16:41:35.081Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/YouTube/</loc>
+        <lastmod>2022-01-28T16:42:08.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Whatsapp/</loc>
+        <lastmod>2022-01-28T16:42:38.014Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Medium/</loc>
+        <lastmod>2022-01-28T16:43:36.831Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Transform/</loc>
+        <lastmod>2022-01-28T16:44:15.476Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Draggable/</loc>
+        <lastmod>2022-01-28T16:44:55.102Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/IndexedStack/</loc>
+        <lastmod>2022-01-28T16:45:30.710Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Stack/</loc>
+        <lastmod>2022-01-28T16:45:30.710Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Animation/</loc>
+        <lastmod>2022-01-28T16:46:48.883Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Hero/</loc>
+        <lastmod>2022-01-28T16:47:04.276Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/ListView/</loc>
+        <lastmod>2022-01-28T16:47:56.187Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/FloatingActionButton/</loc>
+        <lastmod>2022-01-28T16:48:12.633Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Markdown/</loc>
+        <lastmod>2022-01-28T16:48:50.866Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Poem/</loc>
+        <lastmod>2022-02-02T18:55:36.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Twitter/</loc>
+        <lastmod>2022-02-02T18:55:58.537Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/PageView/</loc>
+        <lastmod>2022-02-03T08:31:52.600Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Layouts/</loc>
+        <lastmod>2022-02-03T08:56:24.211Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/TextField/</loc>
+        <lastmod>2022-02-03T09:32:44.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/github/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Snyk/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/RunKit/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Node-js/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/NPM/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/LwM2M/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/CoAP/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/HTTP/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/AMQP/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Protocol/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/MQTT/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/NB-IoT/</loc>
+        <lastmod>2022-02-22T03:27:04.771Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/ZigBee/</loc>
+        <lastmod>2022-02-22T03:27:04.771Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/BLE/</loc>
+        <lastmod>2022-02-22T03:27:04.771Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/LoRa/</loc>
+        <lastmod>2022-02-22T03:27:04.771Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Gateway/</loc>
+        <lastmod>2022-02-22T03:27:04.771Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Object/</loc>
+        <lastmod>2022-02-26T10:01:18.716Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/data/</loc>
+        <lastmod>2022-03-03T03:51:40.221Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Rocky/</loc>
+        <lastmod>2022-03-03T03:57:11.560Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/CentOS/</loc>
+        <lastmod>2022-03-03T03:57:11.560Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Basic/</loc>
+        <lastmod>2022-03-05T05:53:47.593Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Container/</loc>
+        <lastmod>2022-03-05T05:56:32.706Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Windows/</loc>
+        <lastmod>2022-03-07T08:44:29.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Mac-OS/</loc>
+        <lastmod>2022-03-07T08:44:29.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Linux/</loc>
+        <lastmod>2022-03-07T08:44:29.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Kernel/</loc>
+        <lastmod>2022-03-07T08:44:29.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Long-Mode/</loc>
+        <lastmod>2022-03-17T05:53:38.314Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Protected-Mode/</loc>
+        <lastmod>2022-03-17T05:53:38.314Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/Real-Mode/</loc>
+        <lastmod>2022-03-17T05:53:38.314Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/OS/</loc>
+        <lastmod>2022-03-17T05:53:38.314Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/tags/C/</loc>
+        <lastmod>2022-04-08T14:13:40.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+</urlset>
+

@@ -1,0 +1,2321 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="System,CPU,Real Mode,Protected Mode,Long Mode">
+    <meta name="description" content="This Website Focus on Software development, Flutter programming.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-K766727');</script>
+    <!-- End Google Tag Manager -->
+
+
+     <!-- googleAdSense -->
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8488991078175700"
+     crossorigin="anonymous"></script>
+    <!-- End googleAdSense -->
+
+    
+    <title>CPU Working Mode | Poolideas</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    
+    <!--  -->
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Poolideas" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Poolideas</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>Index</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>Tags</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>Categories</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>Archives</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>About</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>Contact</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>Friends</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Poolideas</div>
+        <div class="logo-desc">
+            
+            This Website Focus on Software development, Flutter programming.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			Index
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			Tags
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			Categories
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			Archives
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			About
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			Friends
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/earthandy" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/earthandy" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">CPU Working Mode</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/OS/">
+                                <span class="chip bg-color">OS</span>
+                            </a>
+                        
+                            <a href="/tags/Real-Mode/">
+                                <span class="chip bg-color">Real Mode</span>
+                            </a>
+                        
+                            <a href="/tags/Protected-Mode/">
+                                <span class="chip bg-color">Protected Mode</span>
+                            </a>
+                        
+                            <a href="/tags/Long-Mode/">
+                                <span class="chip bg-color">Long Mode</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/System/" class="post-category">
+                                System
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    2022-03-17
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
+                    4.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    29 Min
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h4 id="Real-Mode"><a href="#Real-Mode" class="headerlink" title="Real Mode"></a>Real Mode</h4><p>Real Mode is also known as real address mode. Real means real. This real is divided into two aspects. One is to run real instructions, without distinguishing the actions of instructions, and to directly execute the real functions of instructions. The address is real, and any address is sent to memory without restriction.</p>
+<p><strong>Real Mode Registers</strong></p>
+<p>Since the CPU completes the corresponding function according to the instruction, for example: ADD AX, CX; this instruction completes the addition operation. AX and CX are the operands of the ADD instruction, which can be understood as the two parameters of the ADD function. These two parameters’ function is to add the data in AX and CX. The operand of an instruction can be a register, a memory address, or a constant. In fact, it is usually a register. AX and CX are the registers in the x86 CPU. Let’s take a look at the registers of the x86 CPU in real mode. Each register in the table is 16 bits.</p>
+<p><img src="Registers-in-real-mode.png" alt="Registers in real mode"></p>
+<p><strong>Accessing Memory in Real Mode</strong></p>
+<p>Although there are registers, data and instructions are stored in memory. Under normal circumstances, it is necessary to load data into registers to operate, and there is also the action of fetching instructions. All these need to access memory, and we know that accessing memory depends on the address value.</p>
+<p>The question is, how is this value calculated? The calculation process is shown in the figure below.</p>
+<p><img src="Memory-access-method-in-real-mode.png" alt="Memory access method in real mode"></p>
+<p>Combined with the above figure, it can be found that all memory addresses are shifted left by 4 bits from the segment register, plus a value or constant in a general register to form an address, and then access the memory from this address. This is the famous segmented memory management model. It’s just important to note here that the code segment is determined by CS and IP, while the stack segment is determined by SS and SP segments.</p>
+<p><strong>Real Mode Interrupt</strong></p>
+<p>Interrupt is to suspend the execution of the current program, and instead jump to another specific address to run a specific code. In real mode, its implementation process is to save the CS and IP registers first, and then load the new CS and IP registers, so how is the interrupt generated?</p>
+<p>In the first case, the interrupt controller sends an electronic signal to the CPU, and the CPU responds to this signal. The interrupt controller then sends the interrupt number to the CPU, which is a hardware interrupt.</p>
+<p>The second case is that the CPU executes the INT instruction, which will be followed by a constant, which is the soft interrupt number. This condition is a software interrupt.</p>
+<p>Whether it is a hardware interrupt or a software interrupt, it is a way for the CPU to respond to external events. In order to realize the interrupt, it is necessary to put an interrupt vector table in the memory, and the address and length of this table are pointed to by the specific register IDTR of the CPU. In real mode, an entry in the table consists of a code segment address and an offset within the segment, as shown in the following figure.</p>
+<p><img src="Interrupt-vector-table.png" alt="Interrupt vector table"></p>
+<p>With the interrupt number, the CPU can calculate the entry in the interrupt vector according to the information in the IDTR register, and then load the CS (load code segment base address) and IP (load code segment offset) registers, and finally respond interrupt.</p>
+<p>Let’s write a Hello World application under DOS. This is an assembly code program working in real mode, with a total of 16 bits. The specific code is as follows:</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">data SEGMENT ;
+    hello  DB 'Hello World!$'
+data ENDS
+code SEGMENT ;
+    ASSUME CS:CODE,DS:DATA
+start:
+    MOV AX,data               
+    MOV DS,AX    
+    LEA DX,hello 
+    MOV AH,09h   
+    INT 21h      
+    MOV AX,4C00h 
+    INT 21h      
+code ENDS
+END start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>Most are operation registers, where <code>LEA</code> is an address fetch instruction, <code>MOV</code> is a data transfer instruction, and <code>INT</code> is an interrupt instruction.</p>
+<h5 id="INT-21H-instruction-description-and-usage"><a href="#INT-21H-instruction-description-and-usage" class="headerlink" title="INT 21H instruction description and usage"></a>INT 21H instruction description and usage</h5><p>For example: keyboard input is required and echoed.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">MOV AH,01
+INT 21H<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>Through these two instructions, the input characters will be stored in <code>AL</code>, and the value of <code>AH</code> needs to be obtained by looking up the table. The table is as follows:</p>
+<table>
+<thead>
+<tr>
+<th><strong>AH</strong></th>
+<th><strong>Function</strong></th>
+<th><strong>Call parameters</strong></th>
+<th><strong>Return parameter</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Program termination (same as INT 20H)</td>
+<td>CS=block prefix</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>keyboard input and echo</td>
+<td></td>
+<td>AL=Enter character</td>
+</tr>
+<tr>
+<td>2</td>
+<td>show output</td>
+<td>DL=output character</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Asynchronous communication input</td>
+<td></td>
+<td>AL=input data</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Asynchronous communication output</td>
+<td>DL = output data</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>printer output</td>
+<td>DL=output character</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Direct console I/O</td>
+<td>DL=FF (input) DL=Character (output)</td>
+<td>AL=Enter character</td>
+</tr>
+<tr>
+<td>7</td>
+<td>keyboard input (no echo)</td>
+<td></td>
+<td>AL=Enter character</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Keyboard input (no echo) to detect Ctrl-Break</td>
+<td></td>
+<td>AL=Enter character</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Display string DS:DX=string address ‘$’ end string</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>0A</td>
+<td>Keyboard input into the buffer DS:DX=the first address of the buffer (DS:DX)=the maximum number of characters in the buffer</td>
+<td>(DS:DX+1)=Number of characters actually entered</td>
+<td></td>
+</tr>
+<tr>
+<td>0B</td>
+<td>Check keyboard status</td>
+<td></td>
+<td>AL=00 with input AL=FF without input</td>
+</tr>
+<tr>
+<td>0C</td>
+<td>Clear the input buffer and request the specified input function</td>
+<td>AL=input function number (1,6,7,8,A)</td>
+<td></td>
+</tr>
+<tr>
+<td>0D</td>
+<td>Disk reset</td>
+<td></td>
+<td>clear file buffer</td>
+</tr>
+<tr>
+<td>0E</td>
+<td>Specifies the current default disk drive</td>
+<td>DL=drive letter 0=A,1=B,…</td>
+<td>AL=Number of drives</td>
+</tr>
+<tr>
+<td>0F</td>
+<td>open a file</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 file found AL=FF file not found</td>
+</tr>
+<tr>
+<td>10</td>
+<td>close file</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 The directory was modified successfully AL=FF The file was not found in the directory</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Find the first directory entry DS:DX=FCB first address</td>
+<td>AL=00 found AL=FF not found</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Find the next directory entry</td>
+<td>DS:DX=FCB first address (with * or ? in the file)</td>
+<td>AL=00 found AL=FF not found</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Delete Files</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 Deleted successfully AL=FF Not found</td>
+</tr>
+<tr>
+<td>14</td>
+<td>sequential read</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 read successfully =01 end of file, no data in record =02 insufficient DTA space =03 end of file, incomplete record</td>
+</tr>
+<tr>
+<td>15</td>
+<td>write sequentially</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 Write successfully =01 Disk full =02 DTA space is not enough</td>
+</tr>
+<tr>
+<td>16</td>
+<td>build file</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 build successfully =FF no disk space</td>
+</tr>
+<tr>
+<td>17</td>
+<td>file rename</td>
+<td>DS:DX=FCB first address</td>
+<td>(DS:DX+1)=old filename (DS:DX+17)=new filename</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Get the current default disk drive</td>
+<td></td>
+<td>AL=default drive letter 0=A,1=B,2=C,…</td>
+</tr>
+<tr>
+<td>1A</td>
+<td>set DTA address</td>
+<td>DS:DX=DTA address</td>
+<td></td>
+</tr>
+<tr>
+<td>1B</td>
+<td>Get the default drive FAT information</td>
+<td></td>
+<td>AL=Number of sectors per cluster DS:BX=FAT identification byte CX=Physical sector size DX=Number of clusters of default drive</td>
+</tr>
+<tr>
+<td>1C</td>
+<td>Fetch any drive FAT information</td>
+<td>DL=drive letter</td>
+<td>Ditto</td>
+</tr>
+<tr>
+<td>21</td>
+<td>random read</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 read successfully =01 end of file =02 buffer overflow =03 buffer full</td>
+</tr>
+<tr>
+<td>22</td>
+<td>random write</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 write success =01 disk full =02 buffer overflow</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Determining file size</td>
+<td>DS:DX=FCB first address</td>
+<td>AL=00 success (fill in FCB for file length) AL=FF not found</td>
+</tr>
+<tr>
+<td>24</td>
+<td>set random record number</td>
+<td>DS:DX=FCB first address</td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>set interrupt vector</td>
+<td>DS:DX=interrupt vector AL=interrupt type number</td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>Create a block prefix</td>
+<td>DX=new block prefix</td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>random block read</td>
+<td>DS:DX=FCB first address CX=Number of records</td>
+<td>AL=00 Read successfully =01 End of file =02 Buffer is too small, end of transmission =03 Buffer is not full</td>
+</tr>
+<tr>
+<td>28</td>
+<td>random block write</td>
+<td>DS:DX=FCB first address CX=Number of records</td>
+<td>AL=00 write success =01 disk full =02 buffer overflow</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Analysis file name</td>
+<td>ES:DI=FCB first address DS:SI=ASCIIZ string AL=Control analysis flag</td>
+<td>AL=00 Standard file =01 Ambiguous file =02 Illegal drive letter</td>
+</tr>
+<tr>
+<td>2A</td>
+<td>take date</td>
+<td></td>
+<td>CX=year DH:DL=month:day (binary)</td>
+</tr>
+<tr>
+<td>2B</td>
+<td>Set Date CX:DH:DL=Year:Month:Day</td>
+<td>AL=00 success =FF invalid</td>
+<td></td>
+</tr>
+<tr>
+<td>2C</td>
+<td>take time</td>
+<td></td>
+<td>CH:CL=hour:minute DH:DL=second:1/100th of a second</td>
+</tr>
+<tr>
+<td>2D</td>
+<td>set time</td>
+<td>CH:CL=hour:minute DH:DL=second:1/100th of a second</td>
+<td>AL=00 success =FF invalid</td>
+</tr>
+<tr>
+<td>2E</td>
+<td>Set the disk automatic read and write flag</td>
+<td>AL=00 turns off the flag AL=01 turns on the flag</td>
+<td></td>
+</tr>
+<tr>
+<td>2F</td>
+<td>Get the first address of the disk buffer</td>
+<td></td>
+<td>ES:BX=buffer first address</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Get the DOS version number</td>
+<td></td>
+<td>AH=release number, AL=version</td>
+</tr>
+<tr>
+<td>31</td>
+<td>end and stay</td>
+<td>AL=return code DX=resident area size</td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>Ctrl-Break detection</td>
+<td>AL=00 get state =01 set state (DL) DL=00 close detection =01 open detection</td>
+<td>DL=00 Disable Ctrl-Break detection =01 Enable Ctrl-Break detection</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Fetch interrupt vector</td>
+<td>AL=Interrupt Type</td>
+<td>ES:BX=Interrupt Vector</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Get free disk space</td>
+<td>DL=drive letter 0=default,1=A,2=B,…</td>
+<td>Success: AX=Number of sectors per cluster BX=Number of valid clusters CX=Number of bytes per sector DX=Number of total clusters Failure:AX=FFFF</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Set/fetch country information</td>
+<td>DS:DX=Information area first address</td>
+<td>BX=Country code (International phone prefix code) AX=Error code</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Create subdirectory (MKDIR)</td>
+<td>DS:DX=ASCIIZ string address</td>
+<td>AX=Error code</td>
+</tr>
+<tr>
+<td>3A</td>
+<td>Delete subdirectory (RMDIR)</td>
+<td>DS:DX=ASCIIZ string address</td>
+<td>AX=Error code</td>
+</tr>
+<tr>
+<td>3B</td>
+<td>Change current directory (CHDIR)</td>
+<td>DS:DX=ASCIIZ string address</td>
+<td>AX=Error code</td>
+</tr>
+<tr>
+<td>3C</td>
+<td>build file</td>
+<td>DS:DX=ASCIIZ string address CX=file attribute</td>
+<td>Success: AX=file code Error: AX=error code</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>open a file</td>
+<td>DS:DX=ASCIIZ string address AL=0 read=1 write=3 read/write</td>
+<td>Success: AX=file code Error: AX=error code</td>
+</tr>
+<tr>
+<td>3E</td>
+<td>close file</td>
+<td>BX=file code</td>
+<td>Failed: AX=error code</td>
+</tr>
+<tr>
+<td>3F</td>
+<td>read file or device</td>
+<td>DS:DX=Data buffer address BX=File code CX=Number of bytes read</td>
+<td>Read successfully: AX=number of bytes actually read AX=0 has reached the end of the file Read error: AX=error code</td>
+</tr>
+<tr>
+<td>40</td>
+<td>write to file or device</td>
+<td>DS:DX=data buffer address BX=file code CX=number of bytes written</td>
+<td>Write successfully: AX=number of bytes actually written Write error:AX=error code</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Delete Files</td>
+<td>DS:DX=ASCIIZ string address</td>
+<td>success: AX=00</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Move the file pointer</td>
+<td>BX=file code CX:DX=displacement AL=movement method (0: absolute displacement from the beginning of the file, 1: relative movement from the current position, 2: absolute displacement from the end of the file)</td>
+<td>Success:DX:AX=new file pointer position Error:AX=error code</td>
+</tr>
+<tr>
+<td>43</td>
+<td>set/get file attributes</td>
+<td>DS:DX=ASCIIZ string address AL=0 Get file attribute AL=1 Set file attribute CX=File attribute</td>
+<td>Success: CX=File Properties Fail: CX=Error Code</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Device file I/O control</td>
+<td>BX=file code AL=0 get status =1 set status DX =2 read data =3 write data =6 get input status =7 get output status</td>
+<td>DX=device information</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Copy file code</td>
+<td>BX=File code 1</td>
+<td>Success: AX=file code 2 Failure: AX=error code</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Manually copy the file code</td>
+<td>BX=File code 1 CX=File code 2</td>
+<td>Failed: AX=error code</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Get the pathname of the current directory</td>
+<td>DL=drive number DS:SI=ASCIIZ string address</td>
+<td>(DS:SI)=ASCIIZ string Failed:AX=error code</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Allocate memory space</td>
+<td>BX=Apply for memory capacity</td>
+<td>Success: AX= allocate memory first place Fail: BX= maximum available memory</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Free up content space</td>
+<td>ES = memory start segment address</td>
+<td>Failed: AX=error code</td>
+</tr>
+<tr>
+<td>4A</td>
+<td>Adjust allocated chunks</td>
+<td>ES=Original memory starting address BX=Re-applied capacity</td>
+<td>Failed: BX=maximum free space AX=error code</td>
+</tr>
+<tr>
+<td>4B</td>
+<td>Assembly/Execution Program</td>
+<td>DS:DX=ASCIIZ string address ES:BX=First address of parameter area AL=0 Load execution AL=3 Load not executed</td>
+<td>Failed: AX=error code</td>
+</tr>
+<tr>
+<td>4C</td>
+<td>end with return code</td>
+<td>AL=return code</td>
+<td></td>
+</tr>
+<tr>
+<td>4D</td>
+<td>get return code</td>
+<td></td>
+<td>AX=return code</td>
+</tr>
+<tr>
+<td>4E</td>
+<td>Find the first matching file</td>
+<td>DS:DX=ASCIIZ string address CX=property</td>
+<td>AX=Error code(02,18)</td>
+</tr>
+<tr>
+<td>4F</td>
+<td>Find the next matching file</td>
+<td>DS:DX=ASCIIZ string address (with ? or * in the file name)</td>
+<td>AX=Error code(18)</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Disk automatic read and write mark</td>
+<td></td>
+<td>AL=Current flag value</td>
+</tr>
+<tr>
+<td>56</td>
+<td>file rename</td>
+<td>DS:DX=ASCIIZ string (old) ES:DI=ASCIIZ string (new)</td>
+<td>AX=Error code(03,05,17)</td>
+</tr>
+<tr>
+<td>57</td>
+<td>Set/fetch file date and time</td>
+<td>BX=file code AL=0 read AL=1 set (DX:CX)</td>
+<td>DX:CX=date and time failed:AX=error code</td>
+</tr>
+<tr>
+<td>58</td>
+<td>get/set allocation strategy code</td>
+<td>AL=0 fetch code AL=1 set code (BX)</td>
+<td>Success: AX=policy code Fail: AX=error code</td>
+</tr>
+<tr>
+<td>59</td>
+<td>get extended error code</td>
+<td></td>
+<td>AX=Extended Error Code BH=Error Type BL=Suggested Action CH=Error Location</td>
+</tr>
+<tr>
+<td>5A</td>
+<td>create temporary files</td>
+<td>CX=file attribute DS:DX=ASCIIZ string address</td>
+<td>Success: AX=file code Fail: AX=error code</td>
+</tr>
+<tr>
+<td>5B</td>
+<td>create new file</td>
+<td>CX=file attribute DS:DX=ASCIIZ string address</td>
+<td>Success: AX=file code Fail: AX=error code</td>
+</tr>
+<tr>
+<td>5C</td>
+<td>control file access</td>
+<td>AL=00 block =01 open BX=file code CX:DX=file displacement SI:DI=file length</td>
+<td>Failed: AX=error code</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Take the block prefix</td>
+<td></td>
+<td>BX=PSP address</td>
+</tr>
+</tbody></table>
+<h4 id="Protected-Mode"><a href="#Protected-Mode" class="headerlink" title="Protected Mode"></a>Protected Mode</h4><p>As the scale of software continues to increase, it requires higher computing power and larger memory capacity. The memory is large, the first problem to be solved is the addressing problem, because 16-bit registers can only represent 216 addresses at most, so the CPU’s registers and arithmetic units must be expanded to 32-bit.</p>
+<p><strong>Protected Mode Register</strong></p>
+<p>Compared with Real Mode, Protected Mode adds some control registers and segment registers, expands the bit width of general-purpose registers, all general-purpose registers are 32-bit, and the lower 16 bits can be used alone, and the lower 16 bits can be split into two 8-bit registers, as shown in the table below.</p>
+<p><img src="Register-composition-in-protected-mode.png" alt="Register composition in protected mode"></p>
+<p><strong>Protected Mode Privilege Level</strong></p>
+<p>In order to distinguish which instructions (such as in, out, cli) and which resources (such as registers, I/O ports, memory addresses) can be accessed, the CPU implements privilege levels. The privilege level is divided into 4 levels, R0~R3. The number of instructions executed by each privilege level is different. R0 can execute all instructions, and R1, R2, and R3 decrease in turn, and they can only execute a subset of the number of instructions at the previous level. The memory access is achieved by the cooperation of the segment descriptor and the privilege level mentioned later. As shown below:</p>
+<p><img src="CPU-Privilege-Diagram.png" alt="CPU Privilege Diagram"></p>
+<p>The above ring diagram, from the outside to the inside, can not only reflect the size of power, but also how much each privilege level controls access to resources, and can also reflect the inclusion relationship between each privilege level. R0 has the most power and can access low-privilege resources, but not vice versa.</p>
+<p><strong>Protected Mode Segment Descriptor</strong></p>
+<p>So far, memory is still a segmentation model. To protect memory, it can be converted into segment protection. Due to the expansion of the CPU, the 32-bit segment base address and segment offset, as well as some other information, must not fit in the 16-bit segment register. If you can’t put it down, you need to find memory to borrow space, and then encapsulate the information describing a segment into a segment descriptor of a specific format, and put it in memory. The format is as follows:</p>
+<p><img src="protected-mode-segment-descriptor.png" alt="Protected Mode Segment Descriptor"></p>
+<p>A segment descriptor has 64-bit 8-byte data, which includes segment base address, segment length, segment permissions, segment type (can be system segment, code segment, data segment), whether the segment is readable and writable, executable, etc. Although the data distribution is a bit messy, this is due to historical reasons. Multiple segment descriptors form a global segment descriptor table in memory, whose base address and length are indicated by the CPU and GDTR registers. As shown below:</p>
+<p><img src="Global-Segment-Descriptor-Table.png" alt="Global Segment Descriptor Table"></p>
+<p>The segment register no longer stores the segment base address, but the index of the specific segment descriptor. When accessing a memory address, the index in the segment register will first find the segment descriptor in the memory in combination with the GDTR register, and then judge whether the access would succeed according to the segment information. </p>
+<p><strong>Protected Mode Segment Selector</strong></p>
+<p>The segment registers CS, DS, ES, SS, FS, GS store not only the descriptor index of a memory segment, but are actually composed of shadow registers, segment descriptor indexes, descriptor table indexes and permission levels. As shown below:</p>
+<p><img src="Protected-Mode-Segment-Selector.png" alt="Protected Mode Segment Selector"></p>
+<p>The shadow register in the above figure is operated by hardware and is invisible to system programmers. It is a cache of segment descriptors designed by hardware to reduce performance loss. Otherwise, each memory access must go to the memory to look up the table, then the performance penalty is huge, and the shadow registers are exactly 64 bits, which hold 8 bytes of segment descriptor data.</p>
+<p>The reason why the lower three bits can put TI and RPL is because the segment descriptor is 8-byte aligned, and the lower 3 bits of each index are 0, like 1000, 10000, 11000. So the lower 3 bits can be used for other things, here they are used to put TI and RPL. Since we don’t need to pay attention to the LDT and only need to use the GDT global descriptor table, TI is always set to 0.</p>
+<p>Usually, the RPL (Request Privilege Level) in CS and SS constitutes the CPL (Current Privilege Level), so it is often RPL=CPL, and then the CPL indicates what authority the initiating visitor needs to access the target segment. When the CPL is greater than the target segment DPL, the CPU prohibits access, and only when the CPL is less than or equal to the target segment DPL (Descriptor Privilege Level) can access.</p>
+<p><strong>Protected Mode Flat Model</strong></p>
+<p>The segmentation model has many flaws. In fact, modern operating systems use the paging model. However, the x86 CPU cannot directly use the paging model, but must decide whether to enable paging according to needs under the premise of the segmentation model. Because this is a rule of the hardware, the programmer cannot change it. But we can simplify the design to make segmentation a “fake”, which is the flat model of protected mode.</p>
+<p>The CPU 32-bit registers can only generate addresses with a size of 4GB at most, and the length of a segment can only be 4GB, so we set the base address of all segments to 0, the length of the segment to 0xFFFFF, and the granularity of the segment length to 4KB, so that all segments point to the same (0~4GB-1) byte address space. The segment length needs to be matched with the G bit. If the G bit is 1, the segment length is equal to 0xfffff 4KB.</p>
+<p><strong>Protected Mode Interrupt</strong></p>
+<p>In Real Mode, the CPU doesn’t need to do permission checks, so it can just load the CS:IP register with the value in the interrupt vector table. The interrupt in protected mode requires permission checking and privilege level switching, so it is necessary to expand the information of the interrupt vector table, that is, each interrupt is represented by an interrupt gate descriptor, which can also be referred to as an interrupt gate. The character still has its own format, as shown in the following figure:</p>
+<p><img src="Interrupt-Gate-Descriptor-in-Protected-Mode.png" alt="Interrupt Gate Descriptor in Protected Mode"></p>
+<p>Similarly, to implement interrupts in protected mode, there must also be an interrupt vector table in memory, which is also pointed to by the IDTR register, but the entry in the interrupt vector table becomes the interrupt gate descriptor, as shown in the following figure:</p>
+<p><img src="Segment-Interrupt-Table-in-Protected-Mode.png" alt="Segment Interrupt Table in Protected Mode"></p>
+<p>After an interrupt is generated, the CPU processes the interrupt in the following order:</p>
+<ol>
+<li>The CPU first checks whether the interrupt number is greater than the last interrupt gate descriptor. The x86 CPU supports a maximum of 256 interrupt sources (ie interrupt number: 0~255), and then checks the descriptor type (whether it is an interrupt gate or a trap gate), whether it is a system descriptor and does it exist in memory.</li>
+<li>Next, check the segment descriptor pointed to by the segment selector in the interrupt gate descriptor.</li>
+<li>Finally, do the permission check. If the CPL is less than or equal to the DPL of the interrupt gate, and the CPL is greater than or equal to the DPL of the segment descriptor pointed to by the segment selector in the interrupt gate, it points to the DPL of the segment descriptor. Further, if the CPL is equal to the DPL of the segment selector in the interrupt gate pointing to the segment descriptor, it means that the same-level authority does not perform stack switching, otherwise, it performs stack switching. If stack switching is performed, SS and ESP with specific permissions need to be loaded from TSS, and of course, the segment descriptor pointed to by the segment selector in SS must be checked.</li>
+<li>After completing this series of checks, the CPU will load the target code segment selector in the interrupt gate descriptor into the CS register, and load the target code segment offset into the EIP register.</li>
+</ol>
+<p><strong>Switch to Protected Mode</strong></p>
+<p>The x86 CPU will automatically enter the real mode after the first power-on and every reset. To enter the protected mode, the programmer needs to write code to switch from the real mode to the protected mode. The steps to switch to protected mode are as follows:</p>
+<p>The first step is to prepare the global segment descriptor table, the code is as follows.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">GDT_START:
+knull_dsc: dq 0
+kcode_dsc: dq 0x00cf9e000000ffff
+kdata_dsc: dq 0x00cf92000000ffff
+GDT_END:
+GDT_PTR:
+GDTLEN  dw GDT_END-GDT_START-1
+GDTBASE  dd GDT_START<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The second step is to load and set the GDTR register to point to the global segment descriptor table.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">lgdt [GDT_PTR]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The third step is to set the CR0 register to enable protection mode.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">;open PE
+mov eax, cr0
+bts eax, 0                      ; CR0.PE =1
+mov cr0, eax         <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The fourth step is to perform a long jump and load the CS segment register, that is, the segment selector.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">jmp dword 0x8 :_32bits_mode <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Why do long jumps? This is because we cannot directly or indirectly move a data to the CS register, because when the protected mode is just turned on, the CS shadow register is still the value in real mode, so we need to tell the CPU to load new segment information .</p>
+<p>Next, the CPU finds that the value of the 0th bit of the CRO register is 1, it will find the global descriptor table according to the instruction of GDTR, and then load the new segment descriptor information into the CS shadow register according to the index value 8. Of course, here The premise is that a series of legitimate checks are carried out. So far, the CPU has really entered the protected mode, and the CPU also has 32-bit processing capabilities.</p>
+<h4 id="Long-Mode"><a href="#Long-Mode" class="headerlink" title="Long Mode"></a>Long Mode</h4><p>Long Mode, also known as <code>AMD64</code>, because this standard was first defined by AMD, it enables the CPU to have 64-bit processing capabilities on the existing basis, which can not only complete 64-bit data operations, but also address 64-bit addresses space. This is even more important on large computers, which typically have several hundred gigabytes of physical memory.</p>
+<p><strong>Long Mode Register</strong></p>
+<p>Compared with the Protected Mode, the Long Mode adds some general-purpose registers and expands the bit width of the general-purpose registers. All general-purpose registers are 64 bits, and the lower 32 bits can be used separately. The lower 32 bits can be split into a lower 16-bit register, and the lower 16 bits can be split into two 8-bit registers, as shown in the following table:</p>
+<p><img src="Registers-in-long-mode.png" alt="Registers in Long Mode"></p>
+<p><strong>Long Mode Segment Descriptor</strong></p>
+<p>Long Mode still has most of the features of protected mode, such as privilege levels and permission checks. The same part will not be repeated, and only the differences between long mode and protected mode will be explained here. Let’s take a look at the format of the paragraph description in the long mode, as shown in the following figure:</p>
+<p><img src="Segment-descriptor-in-long-mode.png" alt="Segment Descriptor in Long Mode"></p>
+<p>In Long Mode, the CPU no longer checks the segment base address and segment length, and only performs related checks on DPL. This check process is the same as in protected mode. When L=1 and D/B=0 in the descriptor, it is a 64-bit code segment, and DPL is still a privilege level of 0~3. Then there are multiple segment descriptions in memory to form a global segment descriptor table, also pointed to by the CPU’s GDTR register. The long mode weakens the segment mode management, and only retains the check of the permission level, ignoring the segment base address and segment length, and the address check is handed over to the MMU.</p>
+<p><strong>Long Mode Interrupt</strong></p>
+<p>In the Protection Mode, in order to realize the permission check of the interrupt, the interrupt gate descriptor is implemented. The corresponding segment selector and its offset in the segment are stored in the interrupt gate descriptor, as well as the DPL permission. If the permission check passes, use The corresponding segment selector and its intra-segment offset are loaded into the CS:EIP registers.</p>
+<p>The Long Mode supports 64-bit memory addressing, so it is necessary to modify and expand the interrupt gate descriptor. Let’s take a look at the format of the interrupt gate descriptor in the long mode, as shown in the following figure:</p>
+<p><img src="Segment-interrupt-Gate-Descriptor-in-Long-Mode.png" alt="Segment Interrupt Gate Descriptor in Long Mode"></p>
+<p>Combined with the above figure, we can see the format change of the interrupt gate descriptor in long mode.</p>
+<ol>
+<li>First, in order to support the 64-bit addressing interrupt gate descriptor, 8 bytes are added to the original basis to store the high 32-bit value of the target segment offset.</li>
+<li>Second, the code segment descriptor corresponding to the target code segment selector must be a 64-bit code segment.</li>
+<li>The <code>IST</code> in the last is the <code>IST</code> pointer in the 64-bit <code>TSS</code>.</li>
+</ol>
+<p>The Long Mode also has an interrupt gate descriptor table in memory, but the entry in the table (as shown in the figure above) is 16 bytes in size, supports up to 256 interrupt sources, and checks the response to interrupts and related permissions. Protected mode is the same and will not be repeated here.</p>
+<p><strong>Switch to Long Mode</strong></p>
+<p>We can either switch directly from Real Mode to Long Mode, or switch from Protected Mode to Long Mode. The steps to switch to Long Mode are as follows.</p>
+<p>The first step is to prepare the long-mode global segment descriptor table.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">ex64_GDT:
+null_dsc:  dq 0
+c64_dsc:dq 0x0020980000000000  
+d64_dsc:dq 0x0000920000000000 
+eGdtLen   equ $ - null_dsc 
+eGdtPtr:dw eGdtLen - 1 
+     dq ex64_GDT<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The second step is to prepare the MMU page table in long mode. This is to enable paging mode. When switching to long mode, paging must be enabled. Think about it, the segment base address and segment length have not been checked in long mode, so the memory The address space is not protected.</p>
+<p>In the Long Mode, the protection of the memory address space is handed over to the MMU. The MMU relies on the page table to convert the address. The page table is stored in the memory in a specific format, and its address is pointed to by the CR3 register of the CPU.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov eax, cr4
+bts eax, 5  
+mov cr4, eax 
+mov eax, PAGE_TLB_BADR 
+mov cr3, eax<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The third step is to load the GDTR register to point to the global segment description table:</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">lgdt [eGdtPtr]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The fourth step is to turn on the long mode. To turn on the protected mode and the paging mode at the same time, the MSR register is defined when the long mode is implemented, and the special instructions rdmsr and wrmsr need to be used for reading and writing. The address of the IA32_EFER register is 0xC0000080, its 8th bit determines whether long mode is enabled.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">mov ecx, IA32_EFER
+rdmsr
+bts eax, 8 
+wrmsr
+mov eax, cr0
+bts eax, 0  
+bts eax, 31
+mov cr0, eax <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>The fifth step is to jump, load the CS segment register, and refresh its shadow register.</p>
+<pre class="line-numbers language-assembly" data-language="assembly"><code class="language-assembly">jmp 08:entry64 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>The process of switching to Long Mode and switching protected mode is similar, but the segment descriptors that need to be prepared are different, and it is necessary to pay attention to turning on Protected Mode and Paging Mode at the same time.</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        Author:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Andy Zhang</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        Link:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://poolideas.cn/2022/03/17/cpu_working_mode/">https://poolideas.cn/2022/03/17/cpu_working_mode/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        Reprint policy:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    All articles in this blog are used except for special statements
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    reprint polocy. If reproduced, please indicate source
+                    <a href="/about" target="_blank">Andy Zhang</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/OS/">
+                                    <span class="chip bg-color">OS</span>
+                                </a>
+                            
+                                <a href="/tags/Real-Mode/">
+                                    <span class="chip bg-color">Real Mode</span>
+                                </a>
+                            
+                                <a href="/tags/Protected-Mode/">
+                                    <span class="chip bg-color">Protected Mode</span>
+                                </a>
+                            
+                                <a href="/tags/Long-Mode/">
+                                    <span class="chip bg-color">Long Mode</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">Buy me a cup of Coffee ☕️</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '1h6oeCf5QgQVQqpv9haSFy17-gzGzoHsz',
+        appKey: 'anvPTdlsI5em2b5VHYwJPLje',
+        notify: 'true' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'en',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+            <div class="card">
+                <a href="/2022/03/18/control_logic_how_expressions_and_statements_coordinate_program_execution/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Control Logic How Expressions And Statements Coordinate Program Execution">
+                        
+                        <span class="card-title">Control Logic How Expressions And Statements Coordinate Program Execution</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-03-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category">
+                                    C
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/">
+                        <span class="chip bg-color">C</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/03/07/system_kernel/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="System kernel">
+                        
+                        <span class="card-title">System kernel</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/System/" class="post-category">
+                                    System
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Kernel/">
+                        <span class="chip bg-color">Kernel</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/Mac-OS/">
+                        <span class="chip bg-color">Mac OS</span>
+                    </a>
+                    
+                    <a href="/tags/Windows/">
+                        <span class="chip bg-color">Windows</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: Poolideas<br />'
+            + 'Author: Andy Zhang<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="6825290935"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">Andy Zhang</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                &nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn" target="_blank">浙ICP备18041980号-2</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/earthandy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:zerotone2022@gmail.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="https://www.facebook.com/andy.zhang.501151" class="tooltipped" target="_blank" data-tooltip="关注我的Facebook: https://www.facebook.com/andy.zhang.501151" data-position="top" data-delay="50">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+
+
+    <a href="https://twitter.com/andy54367570" class="tooltipped" target="_blank" data-tooltip="关注我的Twitter: https://twitter.com/andy54367570" data-position="top" data-delay="50">
+        <i class="fab fa-twitter"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=393927416" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 393927416" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
+            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+     <!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K766727"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

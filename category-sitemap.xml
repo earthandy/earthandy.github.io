@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>https://poolideas.cn/categories/Chrome-OS/</loc>
+        <lastmod>2021-12-20T15:56:15.572Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/docker/</loc>
+        <lastmod>2021-12-20T16:15:47.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Mac-OS/</loc>
+        <lastmod>2022-01-05T17:10:16.327Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+        <lastmod>2022-01-28T16:30:08.096Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Hexo/</loc>
+        <lastmod>2022-01-28T16:48:50.866Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Life/</loc>
+        <lastmod>2022-02-02T18:55:36.465Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Flutter/</loc>
+        <lastmod>2022-02-03T09:32:44.300Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Node-js/</loc>
+        <lastmod>2022-02-07T14:36:49.487Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/IOT%EF%BC%8CProtocol/</loc>
+        <lastmod>2022-02-21T03:22:18.419Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Java/</loc>
+        <lastmod>2022-02-26T10:01:18.716Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/IOT/</loc>
+        <lastmod>2022-03-03T03:51:40.221Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Linux/</loc>
+        <lastmod>2022-03-03T03:57:11.560Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Computer/</loc>
+        <lastmod>2022-03-05T05:53:47.593Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/Docker/</loc>
+        <lastmod>2022-03-05T05:56:32.706Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/System/</loc>
+        <lastmod>2022-03-17T05:53:38.314Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://poolideas.cn/categories/C/</loc>
+        <lastmod>2022-04-08T14:13:40.128Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+</urlset>
+
